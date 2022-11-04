@@ -1,0 +1,16 @@
+quarkus:
+  mongodb:
+    database: prueba1
+    connection-string: mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
+  hibernate-orm:
+    database:
+        generation: drop-and-create
+  datasource:
+    username: root
+    password: jhona_mysql
+    jdbc:
+      url: jdbc:mysql://localhost:3306/prueba?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      driver: com.mysql.cj.jdbc.Driver
+  rest-client:
+    post-proxy:
+      url: https://jsonplaceholder.typicode.com/
