@@ -105,6 +105,14 @@
             <artifactId>quarkus-mongodb-panache</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-jwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-junit5-mockito</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

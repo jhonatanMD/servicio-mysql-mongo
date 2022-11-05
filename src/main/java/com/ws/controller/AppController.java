@@ -2,12 +2,11 @@ package com.ws.controller;
 
 import com.ws.business.IPostBusiness;
 import com.ws.model.dto.ErrorResponse;
-import lombok.RequiredArgsConstructor;
 import org.apache.http.HttpStatus;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.inject.Qualifier;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -21,6 +20,7 @@ public class AppController {
 
     @GET
     @Path("/post/{id}")
+    //@RolesAllowed("write")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getPostById(@PathParam("id") Long id) {
@@ -34,6 +34,7 @@ public class AppController {
 
 
     @GET
+    @RolesAllowed("read")
     @Path("/post")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
